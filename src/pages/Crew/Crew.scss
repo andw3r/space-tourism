@@ -1,0 +1,73 @@
+@import "@styles/base/vars";
+
+.crew {
+  background: url("@assets/img/crew/background-crew-desktop.jpg");
+  position: relative;
+  &__inner {
+  }
+
+  &__wrapper {
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__role {
+    font-family: $primaryFont;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+  &__title {
+    margin: 15px 0 27px;
+  }
+
+  &__text {
+    margin-top: 154px;
+  }
+
+  &__desc {
+    max-width: 445px;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  // tabs
+  &__tab-list {
+    position: absolute;
+    bottom: 94px;
+  }
+
+  &__tab-button {
+    cursor: pointer;
+    margin-right: 24px;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    background: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.17;
+    transition: all 0.25s ease-out;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
