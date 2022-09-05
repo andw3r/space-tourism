@@ -1,0 +1,59 @@
+// ===== Colors ===== //
+$bsPrimary: #d0d6f9; // primary
+$bsLight: #ffffff; // light
+$bsDark: #0b0d17; // dark
+
+// ===== Breakpoints ===== //
+$breakpointSm: 575.98px; // Small
+$breakpointMd: 767.98px; // Medium
+$breakpointLg: 991.98px; // Large
+$breakpointXl: 1199.98px; // Extra large
+$breakpointXxl: 1399.98px; // Extra extra large
+
+// ===== Fonts ===== //
+$mainFont: "Barlow Condensed", sans-serif;
+$primaryFont: "Bellefair", sans-serif;
+$secondaryFont: "Barlow", sans-serif;
+// ===== Container ===== //
+.container {
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+@media (max-width: $breakpointSm) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+} // Extra Small
+
+@media (min-width: $breakpointSm) {
+  .container {
+    max-width: 540px;
+  }
+} // Small
+
+@media (min-width: $breakpointMd) {
+  .container {
+    max-width: 720px;
+  }
+} // Medium
+
+@media (min-width: $breakpointLg) {
+  .container {
+    max-width: 960px;
+  }
+} // Large
+
+@media (min-width: $breakpointXl) {
+  .container {
+    max-width: 990px;
+  }
+} // Extra large
+
+@media (min-width: $breakpointXxl) {
+  .container {
+    max-width: 1100px;
+  }
+} // Extra extra large

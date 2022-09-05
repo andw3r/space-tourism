@@ -1,0 +1,159 @@
+@import "functions";
+
+// headings
+.main-title {
+  font-family: $primaryFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: rem(150);
+  line-height: rem(172);
+  text-transform: uppercase;
+}
+
+.lg-title {
+  font-family: $primaryFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: rem(100);
+  line-height: rem(115);
+  text-transform: uppercase;
+}
+
+.md-title {
+  font-family: $primaryFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: rem(56);
+  line-height: rem(64);
+  text-transform: uppercase;
+}
+
+.xs-title {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: rem(28);
+  line-height: rem(34);
+  letter-spacing: rem(4.725);
+  color: #d0d6f9;
+  text-transform: uppercase;
+}
+
+// body text
+.body-text {
+  font-family: $secondaryFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: rem(18);
+  line-height: rem(32);
+  color: #d0d6f9;
+}
+
+// section
+.section-fullscreen {
+  min-width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media (max-width: $breakpointLg) {
+    height: 100%;
+  }
+}
+
+.main-sub-heading {
+  padding-top: 212px;
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: rem(28);
+  line-height: rem(34);
+  letter-spacing: rem(4.725);
+  text-transform: uppercase;
+  color: #ffffff;
+
+  @media (max-width: $breakpointLg) {
+    padding-top: 136px;
+  }
+
+  @media (max-width: $breakpointMd) {
+    font-size: rem(20);
+    line-height: rem(24);
+    letter-spacing: rem(3.375);
+  }
+
+  @media (max-width: $breakpointSm) {
+    padding-top: 88px;
+    font-size: rem(16);
+    line-height: rem(19);
+    letter-spacing: rem(2.7);
+    text-align: center;
+  }
+}
+
+.brown-bold-text {
+  font-weight: 700;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+}
+
+@media (max-width: $breakpointMd) {
+  .main-title {
+    line-height: rem(150);
+  }
+
+  .lg-title {
+    font-size: rem(80);
+    line-height: rem(92);
+  }
+
+  .md-title {
+    font-size: rem(40);
+    line-height: rem(46);
+  }
+
+  .xs-title {
+    font-size: rem(20);
+    line-height: rem(24);
+    letter-spacing: rem(3.375);
+  }
+
+  .sm-sub-title {
+    font-size: rem(16);
+    line-height: rem(18);
+  }
+
+  .body-text {
+    font-size: rem(16);
+    line-height: rem(28);
+  }
+}
+
+@media (max-width: $breakpointSm) {
+  .main-title {
+    font-size: rem(80);
+    line-height: rem(100);
+  }
+
+  .lg-title {
+    font-size: rem(56);
+    line-height: rem(64);
+  }
+
+  .md-title {
+    font-size: rem(24);
+    line-height: rem(28);
+  }
+
+  .xs-title {
+    font-size: rem(16);
+    line-height: rem(19);
+    letter-spacing: rem(2.7);
+  }
+
+  .body-text {
+    font-size: rem(15);
+    line-height: rem(25);
+  }
+}

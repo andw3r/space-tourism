@@ -1,0 +1,388 @@
+@use "sass:math";
+@import "functions";
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: $breakpointXxl) {
+  .header {
+    .nav {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .destination {
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: $breakpointXl) {
+  .header {
+    margin-top: 0;
+    padding-left: 40px;
+    .bold {
+      display: none;
+    }
+
+    .nav {
+      width: auto;
+      padding: 0 48px;
+      &__item {
+        margin-right: 37px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .destination {
+    &__image {
+      width: 400px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .technology {
+    &__tab-list {
+      margin-right: 30px;
+    }
+
+    &__image {
+    }
+  }
+
+  .crew {
+    &__image {
+      width: 450px;
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: $breakpointLg) {
+  .home {
+    &__button {
+      padding: 102px 48px;
+    }
+  }
+
+  .destination {
+    &__wrapper {
+      text-align: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 62px;
+    }
+
+    &__body {
+      flex-direction: column;
+    }
+
+    &__tab-list {
+      margin-bottom: 32px;
+      max-width: none;
+    }
+
+    &__footer-text {
+      padding: 0 30px 0;
+    }
+  }
+
+  .technology {
+    &__container {
+      padding: 0;
+    }
+
+    &__tab-list {
+      flex-direction: row;
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+
+    &__tab-button {
+      margin-right: 16px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__body {
+      flex-direction: column;
+      padding-bottom: 96px;
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      order: -1;
+    }
+
+    .main-sub-heading {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    &__text {
+      margin-top: 44px;
+      text-align: center;
+      margin-right: 0;
+    }
+
+    &__title {
+      margin: 16px 0;
+    }
+
+    &__desc {
+      max-width: 460px;
+    }
+  }
+
+  .crew {
+    &__body {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__inner {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__title {
+      margin: 8px 0 16px;
+    }
+
+    &__text {
+      margin: 50px auto 100px;
+    }
+
+    &__desc {
+      margin: 0 auto;
+    }
+
+    &__image {
+      margin: 0 auto;
+      position: static;
+    }
+
+    &__tab-list {
+      top: 190px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: $breakpointMd) {
+  .header {
+    padding-left: 0;
+    padding: 0 24px;
+
+    &__container {
+      margin-top: 24px;
+    }
+
+    .nav {
+      right: -100%;
+      padding-top: 33px;
+      top: 0;
+      width: 254px;
+      height: 100%;
+      position: fixed;
+      justify-content: start;
+      flex-direction: column;
+      padding: 40px 26px 0 32px;
+      transition: all 0.25s ease-out;
+      &.active {
+        right: 0;
+      }
+      &__list {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      &__item {
+        margin-bottom: 32px;
+        margin-right: 0;
+        a {
+          padding: 0;
+          &.active-link {
+            position: relative;
+            &::after {
+              right: 0;
+              width: 3px;
+              height: 31px;
+              background: #fff;
+              bottom: 50%;
+              transform: translate(0, 50%);
+            }
+          }
+        }
+      }
+    }
+
+    .bold {
+      display: block;
+    }
+
+    .toggle-btn {
+      display: flex;
+      &--close {
+        margin-bottom: 64px;
+        margin-left: auto;
+        display: flex;
+      }
+    }
+  }
+
+  .home {
+    background: url("@assets/img/home/background-home-tablet.jpg") no-repeat
+      center center fixed;
+    &__wrapper {
+      position: static;
+      display: block;
+      top: 0;
+      padding-top: 112px;
+      transform: translate(0, 0%);
+    }
+
+    &__body {
+      max-width: 450px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      margin: 0 auto 96px;
+      flex-direction: column;
+    }
+
+    &__button {
+      margin: 0 auto;
+    }
+  }
+
+  .destination {
+    background: url("@assets/img/destination/background-destination-tablet.jpg");
+    &__image {
+      width: 300px;
+      margin: 0 auto;
+    }
+  }
+
+  .technology {
+    .main-sub-heading {
+      max-width: 540px;
+    }
+
+    &__tab-button {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+    }
+  }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: $breakpointSm) {
+  .home {
+    background: url("@assets/img/home/background-home-mobile.jpg") no-repeat
+      center center contain;
+
+    &__title {
+      margin: 16px 0;
+    }
+
+    &__body {
+      margin: 0 auto 81px;
+    }
+
+    &__button {
+      padding: 60px 30px;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  .destination {
+    background: url("@assets/img/destination/background-destination-mobile.jpg");
+    &__wrapper {
+      margin-top: 32px;
+    }
+    &__tab-list {
+      margin: 0 auto 28px;
+      width: 237px;
+    }
+
+    &__title {
+      margin-top: 20px;
+    }
+
+    &__footer-text {
+      flex-direction: column;
+      text-align: center;
+      max-width: none;
+    }
+
+    &__more-info {
+      &:first-child {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  .technology {
+    &__text {
+      padding: 0 15px;
+    }
+
+    &__tab-button {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .crew {
+    &__image {
+      position: absolute;
+      width: 177px;
+      left: 50%;
+      top: 130px;
+      transform: translate(-50%, 0);
+      margin: 0;
+    }
+
+    &__text {
+      margin: 300px auto 30px;
+    }
+
+    &__tab-list {
+      top: 400px;
+    }
+  }
+}
+
+@media (min-width: $breakpointMd) {
+  .nav {
+    &__item {
+      a {
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

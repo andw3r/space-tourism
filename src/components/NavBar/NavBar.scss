@@ -1,0 +1,89 @@
+@use "sass:math";
+@import "@styles/base/vars";
+@import "@styles/base/functions";
+.header {
+  z-index: 10;
+  margin-top: 40px;
+  padding-left: 55px;
+  width: 100%;
+  position: absolute;
+  overflow-y: hidden;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+  }
+
+  .nav {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+    width: 830px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &::before {
+      top: 50%;
+      left: -450px;
+      position: absolute;
+      content: "";
+      width: 473px;
+      height: 1px;
+      background: #ffffff;
+      opacity: 0.25;
+    }
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      margin-right: 48px;
+      .active-link {
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 3px;
+          background: #fff;
+          bottom: 0;
+        }
+      }
+
+      a {
+        position: relative;
+        padding: 40px 0;
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+        color: #ffffff;
+        display: flex;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 0;
+          height: 3px;
+          background: #fff;
+          bottom: 0;
+          margin: 0 auto;
+          transition: width 0.25s;
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .bold {
+      margin-right: 5px;
+      font-weight: 700;
+    }
+  }
+
+  .toggle-btn {
+    cursor: pointer;
+    display: none;
+  }
+}

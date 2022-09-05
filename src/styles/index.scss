@@ -1,0 +1,21 @@
+@use "sass:math";
+// basic styles
+@import "base/reset";
+@import "base/vars";
+@import "base/fonts";
+@import "base/global";
+
+body {
+  background: #000;
+  color: $bsLight;
+  font-family: $mainFont, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#root {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@import "base/media";
