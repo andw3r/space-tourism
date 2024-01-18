@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "webpack assembly for coding ",
   "private": "true",
-  "homepage": "https://space-tourism-sable-five.vercel.app/",
+  "homepage": "https://space-tourism-sable-five.vercel.app",
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack build --config webpack.prod.js"
