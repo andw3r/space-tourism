@@ -62,7 +62,6 @@ module.exports = {
   plugins: [
     new ReactRefreshWebpackPlugin(),
     new CleanWebpackPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "public/index.html",
