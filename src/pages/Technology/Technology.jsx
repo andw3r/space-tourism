@@ -69,7 +69,7 @@ const Technology = () => {
 
                       <div className="technology__image">
                         <img
-                          src={require(`@assets/img/technology/${item.portrait}`)}
+                          src={require(`../../assets/img/technology/${item.portrait}`)}
                         />
                       </div>
                     </div>{" "}
@@ -106,7 +106,7 @@ const Technology = () => {
 
                   <div className="technology__image">
                     <img
-                      src={require(`@assets/img/technology/${item.landscape}`)}
+                      src={require(`../../assets/img/technology/${item.landscape}`)}
                     />
                   </div>
                 </div>

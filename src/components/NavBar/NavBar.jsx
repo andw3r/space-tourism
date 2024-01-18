@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./NavBar.scss";
-import logo from "../../assets/img/shared/logo";
-import closeIcon from "../../assets/img/shared/icon-close";
-import openIcon from "../../assets/img/shared/icon-hamburger";
+import logo from "../../assets/img/shared/logo.svg";
+import closeIcon from "../../assets/img/shared/icon-close.svg";
+import openIcon from "../../assets/img/shared/icon-hamburger.svg";
 import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {

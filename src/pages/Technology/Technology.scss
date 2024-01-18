@@ -1,9 +1,9 @@
 @use "sass:math";
-@import "@styles/base/vars";
-@import "@styles/base/functions";
+@import "../../styles/base/_vars";
+@import "../../styles/base/functions";
 
 .technology {
-  background: url("@assets/img/technology/background-technology-desktop.jpg");
+  background: url("../../assets/img/technology/background-technology-desktop.jpg");
 
   &__container {
     padding-left: prc(166, 1440);

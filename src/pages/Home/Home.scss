@@ -1,9 +1,9 @@
 @use "sass:math";
-@import "@styles/base/vars";
-@import "@styles/base/functions";
+@import "../../styles/base/vars";
+@import "../../styles/base/functions";
 
 .home {
-  background: url("@assets/img/home/background-home-desktop.jpg");
+  background: url("../../assets/img/home/background-home-desktop.jpg");
   height: 100vh !important;
   &__wrapper {
     display: flex;

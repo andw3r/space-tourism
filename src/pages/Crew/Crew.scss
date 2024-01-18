@@ -1,7 +1,7 @@
-@import "@styles/base/vars";
+@import "../../styles/base/vars";
 
 .crew {
-  background: url("@assets/img/crew/background-crew-desktop.jpg");
+  background: url("../../assets/img/crew/background-crew-desktop.jpg");
   position: relative;
   &__inner {
   }

@@ -1,6 +1,6 @@
 @use "sass:math";
-@import "@styles/base/vars";
-@import "@styles/base/functions";
+@import "../../styles/base/vars";
+@import "../../styles/base/functions";
 .header {
   z-index: 10;
   margin-top: 40px;

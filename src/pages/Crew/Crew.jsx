@@ -48,7 +48,7 @@ const Crew = () => {
 
                         <div className="crew__image">
                           <img
-                            src={require(`@assets/img/crew/${item.images}`)}
+                            src={require(`../../assets/img/crew/${item.images}`)}
                           />
                         </div>
                       </div>

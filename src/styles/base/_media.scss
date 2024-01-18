@@ -246,8 +246,8 @@
   }
 
   .home {
-    background: url("@assets/img/home/background-home-tablet.jpg") no-repeat
-      center center fixed;
+    background: url("../../assets/img/home/background-home-tablet.jpg")
+      no-repeat center center fixed;
     &__wrapper {
       position: static;
       display: block;
@@ -271,7 +271,7 @@
   }
 
   .destination {
-    background: url("@assets/img/destination/background-destination-tablet.jpg");
+    background: url("../../assets/img/destination/background-destination-tablet.jpg");
     &__image {
       width: 300px;
       margin: 0 auto;
@@ -294,8 +294,8 @@
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: $breakpointSm) {
   .home {
-    background: url("@assets/img/home/background-home-mobile.jpg") no-repeat
-      center center contain;
+    background: url("../../assets/img/home/background-home-mobile.jpg")
+      no-repeat center center contain;
 
     &__title {
       margin: 16px 0;
@@ -313,7 +313,7 @@
   }
 
   .destination {
-    background: url("@assets/img/destination/background-destination-mobile.jpg");
+    background: url("../../assets/img/destination/background-destination-mobile.jpg");
     &__wrapper {
       margin-top: 32px;
     }
