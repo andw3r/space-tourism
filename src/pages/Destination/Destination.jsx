@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import destinationsData from "@assets/data.json";
+import destinationsData from "../../assets/data.json";
 import "./Destination.scss";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import { motion } from "framer-motion";

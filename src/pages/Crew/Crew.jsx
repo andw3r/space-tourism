@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import crewData from "@assets/data.json";
+import crewData from "../../assets/data.json";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import "./Crew.scss";
 import { motion } from "framer-motion";

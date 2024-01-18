@@ -5,8 +5,10 @@
   "private": "true",
   "homepage": "https://space-tourism-sable-five.vercel.app",
   "scripts": {
-    "start": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack build --config webpack.prod.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "author": "andw3r",
   "license": "ISC",
