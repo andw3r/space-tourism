@@ -13,7 +13,12 @@ const Home = () => {
     >
       <div className="container">
         <div className="home__wrapper">
-          <div className="home__body">
+          <motion.div
+            className="home__body"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
             <h5 className="home__sub-title xs-title">
               SO, YOU WANT TO TRAVEL TO
             </h5>
@@ -24,9 +29,15 @@ const Home = () => {
               it. Well sit back, and relax because we’ll give you a truly out of
               this world experience!
             </p>
-          </div>
+          </motion.div>
           <Link className="home__button" to="destination">
-            EXPLORE
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              EXPLORE
+            </motion.div>
           </Link>
         </div>
       </div>

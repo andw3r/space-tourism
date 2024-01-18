@@ -7,7 +7,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 
 module.exports = {
-  mode: "development",
   entry: "./src/index.jsx",
 
   output: {
@@ -15,16 +14,6 @@ module.exports = {
     filename: "js/bundle.[contenthash].js",
     clean: true,
     assetModuleFilename: "assets/img/[hash].[ext]",
-  },
-
-  devServer: {
-    static: {
-      directory: path.resolve(__dirname, "public"),
-    },
-    port: 3000,
-    open: true,
-    compress: true,
-    historyApiFallback: true,
   },
 
   module: {
@@ -60,8 +49,6 @@ module.exports = {
       },
     ],
   },
-
-  devtool: "source-map",
 
   resolve: {
     extensions: [".js", ".jsx", ".png", ".jpg", ".jpeg", ".svg"],

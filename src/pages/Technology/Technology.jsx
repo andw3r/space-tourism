@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import technologyData from "@assets/data.json";
 import "./Technology.scss";
 import { motion } from "framer-motion";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 
 const Technology = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const handleTabChange = (index) => {
+    setActiveTab(index);
+  };
+
+  const tabVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
     <motion.section
       className="technology section-fullscreen"
@@ -16,7 +27,11 @@ const Technology = () => {
         <div className="destination__inner main-sub-heading">
           <span className="brown-bold-text">03</span> SPACE LAUNCH 101
         </div>
-        <Tabs className="technology__wrapper dekstop-tabs">
+        <Tabs
+          className="technology__wrapper dekstop-tabs"
+          index={activeTab}
+          onChange={handleTabChange}
+        >
           <TabList className="technology__tab-list">
             {technologyData.technology.map((item, index) => (
               <Tab
@@ -29,23 +44,37 @@ const Technology = () => {
           </TabList>
 
           <TabPanels>
-            {technologyData.technology.map((item) => (
+            {technologyData.technology.map((item, index) => (
               <TabPanel>
-                <div className="technology__body">
-                  <div className="technology__text">
-                    <p className="technology__sub-title">THE TERMINOLOGY…</p>
-                    <h2 className="technology__title md-title">{item.name}</h2>
-                    <p className="technology__desc body-text">
-                      {item.description}
-                    </p>
-                  </div>
+                {activeTab === index && (
+                  <motion.div
+                    variants={tabVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    transition={{ duration: 0.5 }}
+                  >
+                    <div className="technology__body">
+                      <div className="technology__text">
+                        <p className="technology__sub-title">
+                          THE TERMINOLOGY…
+                        </p>
+                        <h2 className="technology__title md-title">
+                          {item.name}
+                        </h2>
+                        <p className="technology__desc body-text">
+                          {item.description}
+                        </p>
+                      </div>
 
-                  <div className="technology__image">
-                    <img
-                      src={require(`@assets/img/technology/${item.portrait}`)}
-                    />
-                  </div>
-                </div>
+                      <div className="technology__image">
+                        <img
+                          src={require(`@assets/img/technology/${item.portrait}`)}
+                        />
+                      </div>
+                    </div>{" "}
+                  </motion.div>
+                )}
               </TabPanel>
             ))}
           </TabPanels>
